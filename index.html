@@ -17,10 +17,11 @@
         <h1>The Institute of Clinical Minds</h1>
         
         <div id="main">
+            
             <div>
                 <form id = "searchAppointment">
                     <label for="names">Patient(s):</label>
-                    <input type="text" name="names" id="names">
+                    <input type="text" name="names" id="names" autocomplete="off">
                     <br><br>
                     <label for="time">Appointment Time:</label>
                     <input type="time" name="time" id="time">
@@ -39,23 +40,24 @@
                 <form>
                     <p>Question?</p>
                     <label for="names">Answer:</label>
-                    <input type="text" name="answer" id="answer">
+                    <input type="text" name="answer" id="answer" autocomplete="off">
                     <input type="button" name="submit" value="Submit" onClick="testInputs(this.form)">
                 </form>
             </div>
 
             <div hidden id="doneInputs">
-                <h3>Additional Information Required:</h3>
-                <p>Question?</p>
-                <p>Answer:</p>
-                <h3>Thank you. Please wait while we process your information.</h3>
+                <h2>Thank you. Please wait while we process your information.</h2>
             </div>
 
             <div hidden id="incorrect">
                 <p>Incorrect Input</p>
             </div>
+
+            <div hidden id="doneGame">
+                <h2>Appointment Postphoned: Indefinitely</h2>
+            </div>
             
-            <h4>Do not exit fullscreen. Do not leave this page</h4>
+            <h4>Do not exit fullscreen. Do not reload this page.</h4>
         </div>
         
     </body>
