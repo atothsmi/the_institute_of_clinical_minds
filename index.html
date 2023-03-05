@@ -15,22 +15,48 @@
 
     <body>
         <h1>The Institute of Clinical Minds</h1>
-        <div>
-            <form>
-                <label for="names">Patients' Names:</label>
-                <input type="text" name="names" id="names">
-                <label for="time">Appointment Time:</label>
-                <input type="time" name="time" id="time">
-                <input type="button" name="search" value="Search" onClick="search(this.form)">
-            </form>
-
-            <div id="checkInputs">
-                <form>
-                    <input type="button" name="submit" value="Submit" onClick="checkInputs(this.form)">
+        
+        <div id="main">
+            <div>
+                <form id = "searchAppointment">
+                    <label for="names">Patient(s):</label>
+                    <input type="text" name="names" id="names">
+                    <br><br>
+                    <label for="time">Appointment Time:</label>
+                    <input type="time" name="time" id="time">
+                    <input type="button" name="search" value="Search" onClick="look(this.form)" id="search">
                 </form>
             </div>
-        </div>
+            
 
-        <h4>Do not exit fullscreen.</h4>
+            <div hidden id="fakeSearch">
+                <p id="inputedNames">Patient(s): </p>
+                <p>Appointment Time: Unknown</p>
+            </div>
+
+            <div hidden id="checkInputs">
+                <h3>Additional Information Required:</h3>
+                <form>
+                    <p>Question?</p>
+                    <label for="names">Answer:</label>
+                    <input type="text" name="answer" id="answer">
+                    <input type="button" name="submit" value="Submit" onClick="testInputs(this.form)">
+                </form>
+            </div>
+
+            <div hidden id="doneInputs">
+                <h3>Additional Information Required:</h3>
+                <p>Question?</p>
+                <p>Answer:</p>
+                <h3>Thank you. Please wait while we process your information.</h3>
+            </div>
+
+            <div hidden id="incorrect">
+                <p>Incorrect Input</p>
+            </div>
+            
+            <h4>Do not exit fullscreen. Do not leave this page</h4>
+        </div>
+        
     </body>
 </html>
