@@ -2,16 +2,35 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
-        <link rel="stylesheet" href="site.css">
+        <title>The Institute of Clinical Minds</title>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
         <script type="text/javascript" src="site.js"></script>
+
+        <link rel="stylesheet" href="site.css">
+        
     </head>
 
     <body>
         <h1>The Institute of Clinical Minds</h1>
         <div>
-            
+            <form>
+                <label for="names">Patients' Names:</label>
+                <input type="text" name="names" id="names">
+                <label for="time">Appointment Time:</label>
+                <input type="time" name="time" id="time">
+                <input type="button" name="search" value="Search" onClick="search(this.form)">
+            </form>
 
+            <div id="checkInputs">
+                <form>
+                    <input type="button" name="submit" value="Submit" onClick="checkInputs(this.form)">
+                </form>
+            </div>
         </div>
+
+        <h4>Do not exit fullscreen.</h4>
     </body>
 </html>
