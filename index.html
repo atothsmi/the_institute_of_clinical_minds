@@ -22,10 +22,29 @@
                 <form id = "searchAppointment">
                     <label for="names">Patient(s):</label>
                     <input type="text" name="names" id="names" autocomplete="off">
+
                     <br><br>
+
                     <label for="time">Appointment Time:</label>
                     <input type="time" name="time" id="time">
+
+                    <br><br>
+
+                    <label for="lname">Last Letter of Mother's First Name:</label>
+                    <input type="text" name="lname" id="lname">
+
+                    <br><br>
+
+                    <label for="lname2">First Letter of Father's Bachelor Name:</label>
+                    <input type="text" name="lname2" id="lname2">
+
+                    <br><br>
+
+                    <label for="hist">Any history?</label>
+                    <input type="text" name="hist" id="hist">
+
                     <input type="button" name="search" value="Search" onClick="look(this.form)" id="search">
+
                 </form>
             </div>
             
@@ -33,6 +52,9 @@
             <div hidden id="fakeSearch">
                 <p id="inputedNames">Patient(s): </p>
                 <p>Appointment Time: Unknown</p>
+                <p id="inputedlname">Last Letter of Mother's First Name: </p>
+                <p id="inputedlname2">First Letter of Father's Bachelor Name: </p>
+                <p id="inputedHist">Any history? </p>
             </div>
 
             <div hidden id="checkInputs">

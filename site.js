@@ -1,5 +1,5 @@
-var names = []
-var firstNames = true;
+
+
 
 function look(form){
     if (form.names.value == 'done'){
@@ -7,17 +7,21 @@ function look(form){
         $('#doneGame').show();
     }
     else {
+        var inputs = [form.names.value, form.lname.value, form.lname2.value, form.hist.value]
+        var outputs = [$('#inputedNames'), $('#inputedlname'), $('#inputedlname2'), $('#inputedHist')]
+
         $('#searchAppointment').hide();
-        var names = form.names.value;
+        for (let i = 0; i < inputs.length; i++){
+            outputs[i].append(inputs[i])
+        }
         $('#fakeSearch').show();
-        $('#inputedNames').append(names);
         $('#checkInputs').show();
     }
     
 }
 
 function testInputs(form) {
-    if (form.answer.value == "answer"){
+    if (form.answer.value == "Yes"){
         $('#incorrect').hide();
         $('#checkInputs').hide();
         $('#fakeSearch').hide();
