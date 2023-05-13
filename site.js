@@ -20,8 +20,10 @@ function look(form){
     
 }
 
-function testInputs(form) {
-    if (form.answer.value == "Yes"){
+function testInputs() {
+    var inputString = $('#answer').val()
+    
+    if ( inputString == "Yes"){
         $('#incorrect').hide();
         $('#checkInputs').hide();
         $('#fakeSearch').hide();

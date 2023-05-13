@@ -59,12 +59,10 @@
 
             <div hidden id="checkInputs">
                 <h3>Additional Information Required:</h3>
-                <form>
                     <p>Question?</p>
                     <label for="names">Answer:</label>
                     <input type="text" name="answer" id="answer" autocomplete="off">
-                    <input type="button" name="submit" value="Submit" onClick="testInputs(this.form)">
-                </form>
+                    <input type="button" name="submit" value="Submit" id="submit" onClick="testInputs(this.form)">
             </div>
 
             <div hidden id="doneInputs">
@@ -79,7 +77,7 @@
                 <h2>Appointment Postphoned: Indefinitely</h2>
             </div>
             
-            <h4>Do not exit fullscreen. Do not reload this page.</h4>
+            <h4>Do not exit fullscreen. Do not reload this page. Do not press enter.</h4>
         </div>
         
     </body>
